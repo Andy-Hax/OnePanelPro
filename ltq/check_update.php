@@ -1,0 +1,1 @@
+{"app":"Package Name","version":"50","force_update":"false","apk_url":"URL to APK"}

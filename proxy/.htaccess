@@ -1,0 +1,16 @@
+Options -Indexes
+RewriteEngine on
+# Don't apply to URLs that go to existing files or folders.
+
+
+RewriteOptions InheritDown
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^live/(.*)$ live.php?path=$1 [NC,L]
+RewriteRule ^xmltv/(.*)$ xmltv.php?path=$1 [NC,L]
+RewriteRule ^movie/(.*)$ movie.php?path=$1 [NC,L]
+RewriteRule ^series/(.*)$ series.php?path=$1 [NC,L]
+RewriteRule ^timeshift/(.*)$ timeshift.php?path=$1 [NC,L]
+RewriteRule ^httest/(.*)$ httest.php?path=$1 [NC,L]
